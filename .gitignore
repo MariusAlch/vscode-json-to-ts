@@ -1,0 +1,6 @@
+*.log
+node_modules
+build
+out
+.vscode-test
+yarn.lock
