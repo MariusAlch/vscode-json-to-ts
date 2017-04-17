@@ -5,3 +5,6 @@
 
 ## 0.0.2
 - upgrade json-to-ts (key-name validation)
+
+## 0.0.3
+- more info in README
