@@ -8,3 +8,6 @@
 
 ## 0.0.3
 - more info in README
+
+## 0.0.4
+- fixes icons

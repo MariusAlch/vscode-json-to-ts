@@ -1,3 +1,5 @@
+![From clipboard](https://image.ibb.co/fTb60k/icon.png)
+
 # JSON to TS 
 
 ### Convert JSON object to typescript interfaces
@@ -5,10 +7,10 @@
 ## Features
 
 #### Convert from clipboard (Ctrl + Alt + V)
-![From clipboard](https://preview.ibb.co/iTEywQ/from_clipboard.gif "From clipboard")
+![From clipboard](https://image.ibb.co/jz6p35/from_clipboard.gif)
 
 #### Convert from selection (Ctrl + Alt + S)
-![From clipboard](https://preview.ibb.co/med2O5/from_selection.gif "From clipboard")
+![From clipboard](https://image.ibb.co/fjhkbQ/from_selection.gif)
 
 ## Converter
 - Duplicate type reusability
