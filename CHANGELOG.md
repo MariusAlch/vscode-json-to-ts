@@ -4,10 +4,14 @@
 - Initial release
 
 ## 0.0.2
-- upgrade json-to-ts (key-name validation)
+- UPDATE: upgrade json-to-ts (key-name validation)
 
 ## 0.0.3
-- more info in README
+- UPDATE: more info in README
 
 ## 0.0.4
-- fixes icons
+- FIX: readme icons
+
+## 0.1.0
+- FIX: replace selection with types
+- FEATURE: json like structure support (optional quotes on keys)

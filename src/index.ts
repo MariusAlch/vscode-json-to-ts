@@ -4,7 +4,11 @@ import * as fs from 'fs';
 import { Uri, ViewColumn, TextEditorSelectionChangeKind, Range, ExtensionContext, Position, window, commands,  } from "vscode";
 import JsonToTS from 'json-to-ts'
 import * as copyPaste from 'copy-paste'
-import { handleError, getClipboardText, parseJson, pasteToMarker, getSelectedText, getViewColumn, validateLength } from "./lib";
+import { handleError, getClipboardText, parseJson, pasteToMarker, getSelectedText, getViewColumn, validateLength, logEvent } from "./lib";
+import * as UniversalAnalytics from 'universal-analytics'
+
+const UA: UniversalAnalytics = require('universal-analytics')
+const visitor = UA('UA-97872528-2')
 
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('jsonToTs.fromSelection', transformFromSelection));
@@ -16,6 +20,7 @@ function transformFromSelection () {
   const tmpFileUri = Uri.file(tmpFilePath);
 
   getSelectedText()
+    .then(logEvent(visitor, 'Selection'))
     .then(validateLength)
     .then(parseJson)
     .then(json => {
@@ -34,20 +39,17 @@ function transformFromSelection () {
 
 function transformFromClipboard () {
 
-  try {
-    getClipboardText()
-      .then(validateLength)
-      .then(parseJson)
-      .then(json => {
-        return JsonToTS(json)
-          .reduce((a,b) => `${a}\n\n${b}`)
-      })
-      .then(interfaces => {
-        pasteToMarker(interfaces)
-      })
-      .catch(handleError)
-  } catch (error) {
-    console.log(error);
-  }
-    
+  getClipboardText()
+    .then(logEvent(visitor, 'Clipboard'))
+    .then(validateLength)
+    .then(parseJson)
+    .then(json => {
+      return JsonToTS(json)
+        .reduce((a,b) => `${a}\n\n${b}`)
+    })
+    .then(interfaces => {
+      pasteToMarker(interfaces)
+    })
+    .catch(handleError)
+
 }

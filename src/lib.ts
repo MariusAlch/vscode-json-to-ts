@@ -1,5 +1,6 @@
 import { ViewColumn, window, Position } from "vscode";
 import * as copyPaste from "copy-paste";
+import { Client } from "universal-analytics";
 
 export function getClipboardText () {
   try {
@@ -14,11 +15,30 @@ export function handleError(error: Error) {
 }
 
 export function parseJson (json: string): Promise<object> {
+  const tryEval = str => eval(`const a = ${str}; a`)
+  
   try {
     return Promise.resolve(JSON.parse(json))
+  } catch (ignored) {
+  }
+
+  try {
+    return Promise.resolve(tryEval(json))
   } catch (error) {
     return Promise.reject(new Error('Selected string is not a valid JSON'))
   }
+  
+}
+
+export const logEvent = (visitor: Client, eventAction: string) => (jsonString: string): string => {
+  visitor
+    .event({
+      ec: "JSON transform",
+      ea: eventAction,
+      value: jsonString
+    }).send()
+    
+  return jsonString
 }
 
 export function getViewColumn(): ViewColumn {
@@ -40,12 +60,9 @@ export function getViewColumn(): ViewColumn {
 export function pasteToMarker (content: string) {
   const { activeTextEditor } = window;
 
-  return window.activeTextEditor.edit((editBuilder) => {
-    const startLine = window.activeTextEditor.selection.start.line;
-    const lastCharIndex = window.activeTextEditor.document.lineAt(startLine).text.length;
-    const position = new Position(startLine, lastCharIndex);
-
-    editBuilder.insert(position, content);
+  return activeTextEditor.edit((editBuilder) => {
+    editBuilder.replace(activeTextEditor.selection, content)
+    const {start} = activeTextEditor.selection
   })
 }
 

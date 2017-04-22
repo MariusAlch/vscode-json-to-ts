@@ -6,5 +6,6 @@
     "search.exclude": {
         "out": true, // set this to false to include "out" folder in search results
         ".vscode-test": true // set this to false to include "out" folder in search results
-    }
+    },
+    "vsicons.presets.angular": false
 }

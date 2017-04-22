@@ -6,14 +6,17 @@
 
 ## Features
 
-#### Convert from clipboard (Ctrl + Alt + V)
-![From clipboard](https://image.ibb.co/jz6p35/from_clipboard.gif)
+#### Convert from clipboard (`Ctrl + Alt + V`)
+![From clipboard](https://s22.postimg.org/8yt8bf6ld/from_clipboard_crop.gif)
 
-#### Convert from selection (Ctrl + Alt + S)
-![From clipboard](https://image.ibb.co/fjhkbQ/from_selection.gif)
+#### Convert from selection (`Ctrl + Alt + S`)
+![From clipboard](https://s22.postimg.org/hicm96ext/from_selection-crop.gif)
+
+#### Optional quotes
+![Optional quotes](https://s22.postimg.org/rgxkvnodd/optional-quotes_crop.gif)
 
 ## Converter
-- Duplicate type reusability
+- Duplicate type prevention
 - Optional types
 - Array types
 
