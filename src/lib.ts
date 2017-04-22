@@ -1,6 +1,17 @@
 import { ViewColumn, window, Position } from "vscode";
+import * as os from "os"
 import * as copyPaste from "copy-paste";
 import { Client } from "universal-analytics";
+import * as UuidByString from "uuid-by-string"
+
+export function getUserId (): string {
+  const hostname = os.hostname();
+  const { username } = os.userInfo();
+  const platform = os.platform()
+
+  const str = [hostname, username, platform].join("--")
+  return UuidByString(str)
+}
 
 export function getClipboardText () {
   try {
@@ -31,13 +42,14 @@ export function parseJson (json: string): Promise<object> {
 }
 
 export const logEvent = (visitor: Client, eventAction: string) => (jsonString: string): string => {
+  const eventLabel = jsonString.slice(0, 250)
+
   visitor
     .event({
-      ec: "JSON transform",
-      ea: eventAction,
-      value: jsonString
+      eventCategory: "JSON transform",
+      eventAction: eventAction,
+      eventLabel: eventLabel
     }).send()
-    
   return jsonString
 }
 

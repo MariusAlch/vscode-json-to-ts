@@ -4,11 +4,11 @@ import * as fs from 'fs';
 import { Uri, ViewColumn, TextEditorSelectionChangeKind, Range, ExtensionContext, Position, window, commands,  } from "vscode";
 import JsonToTS from 'json-to-ts'
 import * as copyPaste from 'copy-paste'
-import { handleError, getClipboardText, parseJson, pasteToMarker, getSelectedText, getViewColumn, validateLength, logEvent } from "./lib";
+import { handleError, getClipboardText, parseJson, pasteToMarker, getSelectedText, getViewColumn, validateLength, logEvent, getUserId } from "./lib";
 import * as UniversalAnalytics from 'universal-analytics'
 
 const UA: UniversalAnalytics = require('universal-analytics')
-const visitor = UA('UA-97872528-2')
+const visitor = UA('UA-97872528-2', getUserId())
 
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('jsonToTs.fromSelection', transformFromSelection));

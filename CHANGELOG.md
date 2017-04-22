@@ -15,3 +15,6 @@
 ## 0.1.0
 - FIX: replace selection with types
 - FEATURE: json like structure support (optional quotes on keys)
+
+## 0.1.1
+- FIX: statistics
