@@ -18,3 +18,6 @@
 
 ## 0.1.1
 - FIX: statistics
+
+## 1.0.0
+- Added "Array of Objects" support
