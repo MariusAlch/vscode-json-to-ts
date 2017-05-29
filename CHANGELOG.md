@@ -24,3 +24,6 @@
 
 ## 1.1.0
 - array merging
+
+## 1.1.1
+- optional types fix
