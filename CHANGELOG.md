@@ -27,3 +27,6 @@
 
 ## 1.1.1
 - optional types fix
+
+## 1.1.2
+- update readme
