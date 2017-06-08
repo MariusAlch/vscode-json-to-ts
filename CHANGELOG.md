@@ -30,3 +30,6 @@
 
 ## 1.1.2
 - update readme
+
+## 1.2.0
+- array merging edge cases fixed
