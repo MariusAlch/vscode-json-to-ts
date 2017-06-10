@@ -15,11 +15,12 @@
 #### Optional quotes
 ![Optional quotes](https://s22.postimg.org/rgxkvnodd/optional-quotes_crop.gif)
 
-### [Image](https://ibb.co/fwnoYF) comparison to similar extension "json2ts" (2017-05-29) 
+### [Image](https://ibb.co/fwnoYF) comparison to similar extension "json2ts" (0.0.6) 
 
 ## Converter
 - Array type merging (**Huge deal**)
 - Duplicate type prevention
+- Union types
 - Optional types
 - Array types
 

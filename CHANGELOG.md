@@ -42,3 +42,6 @@
 
 ## 1.3.2
 - mistakes were made
+
+## 1.4.2
+- union types
