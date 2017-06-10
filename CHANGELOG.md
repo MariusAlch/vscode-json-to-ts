@@ -36,3 +36,6 @@
 
 ## 1.3.0
 - normalizing inavalid interface names (names tart with symbols, numbers, etc.)
+
+## 1.3.1
+- normalizing inavalid interface names should be pascal cased
