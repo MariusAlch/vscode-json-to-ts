@@ -33,3 +33,6 @@
 
 ## 1.2.0
 - array merging edge cases fixed
+
+## 1.3.0
+- normalizing inavalid interface names (names tart with symbols, numbers, etc.)
