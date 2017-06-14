@@ -45,3 +45,6 @@
 
 ## 1.4.2
 - union types
+
+## 1.4.3
+- invalid key optional type fix
