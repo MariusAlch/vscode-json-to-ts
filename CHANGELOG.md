@@ -48,3 +48,6 @@
 
 ## 1.4.3
 - invalid key optional type fix
+
+## 1.4.3
+- underscore naming fixed unquoted
