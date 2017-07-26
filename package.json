@@ -1,5 +1,5 @@
 {
-  "name": "vscode-json-to-ts",
+  "name": "json-to-ts",
   "displayName": "JSON to TS",
   "description": "Convert JSON object to typescript interfaces",
   "version": "1.5.0",
