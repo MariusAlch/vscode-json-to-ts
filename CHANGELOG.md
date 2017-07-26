@@ -49,5 +49,8 @@
 ## 1.4.3
 - invalid key optional type fix
 
-## 1.4.3
+## 1.4.4
 - underscore naming fixed unquoted
+
+## 1.5.0
+- nullable types should be merged
