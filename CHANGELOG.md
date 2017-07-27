@@ -54,3 +54,6 @@
 
 ## 1.5.0
 - nullable types should be merged
+
+## 1.5.2
+- update readme
