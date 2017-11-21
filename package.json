@@ -2,7 +2,7 @@
   "name": "json-to-ts",
   "displayName": "JSON to TS",
   "description": "Convert JSON object to typescript interfaces",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "publisher": "MariusAlchimavicius",
   "icon": "icon.png",
   "keywords": [

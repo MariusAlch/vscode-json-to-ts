@@ -57,3 +57,5 @@
 
 ## 1.5.2
 - update readme
+## 1.5.4
+- remove ssl 
