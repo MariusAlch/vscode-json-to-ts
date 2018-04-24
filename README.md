@@ -8,13 +8,13 @@
 ## Features
 
 #### Convert from clipboard (`Ctrl + Alt + V`)
-![From clipboard](https://s22.postimg.org/8yt8bf6ld/from_clipboard_crop.gif)
+![From clipboard](./images/clipboard.gif)
 
 #### Convert from selection (`Ctrl + Alt + S`)
-![From clipboard](https://s22.postimg.org/hicm96ext/from_selection-crop.gif)
+![From selection](./images/selection.gif)
 
 #### Optional quotes
-![Optional quotes](https://s22.postimg.org/rgxkvnodd/optional-quotes_crop.gif)
+![Optional quotes](./images/optional-quotes.gif)
 
 ### [Image](https://ibb.co/fwnoYF) comparison to similar extension "json2ts" (0.0.6) 
 
