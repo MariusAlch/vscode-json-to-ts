@@ -1,8 +1,8 @@
 {
-  "name": "json-to-ts",
+  "name": "vscode-json-to-ts",
   "displayName": "JSON to TS",
   "description": "Convert JSON object to typescript interfaces",
-  "version": "1.5.5",
+  "version": "1.6.5",
   "publisher": "MariusAlchimavicius",
   "icon": "icon.png",
   "keywords": [
@@ -19,8 +19,7 @@
   ],
   "main": "./out/src/index",
   "contributes": {
-    "commands": [
-      {
+    "commands": [{
         "command": "jsonToTs.fromSelection",
         "title": "JSON to TS: Convert from selection"
       },
@@ -29,8 +28,7 @@
         "title": "JSON to TS: Convert from clipboard"
       }
     ],
-    "keybindings": [
-      {
+    "keybindings": [{
         "command": "jsonToTs.fromClipboard",
         "key": "ctrl+alt+V"
       },
@@ -64,13 +62,13 @@
     "@types/mocha": "^2.2.32",
     "@types/node": "^7.0.22",
     "@types/universal-analytics": "0.3.27",
-    "mocha": "^3.4.2",
+    "mocha": "^7.1.0",
     "typescript": "^2.0.3",
-    "vscode": "^1.0.0"
+    "vscode": "^1.1.36"
   },
   "dependencies": {
     "copy-paste": "^1.3.0",
-    "json-to-ts": "^1.5.0",
+    "json-to-ts": "1.7.0",
     "universal-analytics": "^0.4.13",
     "uuid-by-string": "^0.2.2"
   }
