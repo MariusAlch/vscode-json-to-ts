@@ -1,5 +1,5 @@
 {
-  "name": "vscode-json-to-ts",
+  "name": "json-to-ts",
   "displayName": "JSON to TS",
   "description": "Convert JSON object to typescript interfaces",
   "version": "1.6.5",
@@ -19,7 +19,8 @@
   ],
   "main": "./out/src/index",
   "contributes": {
-    "commands": [{
+    "commands": [
+      {
         "command": "jsonToTs.fromSelection",
         "title": "JSON to TS: Convert from selection"
       },
@@ -28,7 +29,8 @@
         "title": "JSON to TS: Convert from clipboard"
       }
     ],
-    "keybindings": [{
+    "keybindings": [
+      {
         "command": "jsonToTs.fromClipboard",
         "key": "ctrl+alt+V"
       },
