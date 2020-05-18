@@ -1,11 +1,10 @@
 import * as path from "path";
 import * as os from "os";
 import * as fs from "fs";
-import { Uri, ExtensionContext, commands } from "vscode";
+import { Uri, ExtensionContext, commands, env } from "vscode";
 import JsonToTS from "json-to-ts";
 import {
   handleError,
-  getClipboardText,
   parseJson,
   pasteToMarker,
   getSelectedText,
@@ -32,7 +31,7 @@ function transformFromSelection() {
   const tmpFilePath = path.join(os.tmpdir(), "json-to-ts.ts");
   const tmpFileUri = Uri.file(tmpFilePath);
 
-  getSelectedText()
+  env.clipboard.readText()
     .then(logEvent(visitor, "Selection"))
     .then(validateLength)
     .then(parseJson)
