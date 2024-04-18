@@ -4,8 +4,6 @@
 
 ### Convert JSON object to typescript interfaces
 
-### [Try it Online](http://www.jsontots.com)
-
 ## Features
 
 #### Convert from clipboard (`Shift + Ctrl + Alt + V`)
