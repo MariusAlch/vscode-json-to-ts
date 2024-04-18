@@ -2,43 +2,36 @@
   "name": "json-to-ts",
   "displayName": "JSON to TS",
   "description": "Convert JSON object to typescript interfaces",
-  "version": "1.7.4",
+  "version": "1.8.0",
   "publisher": "MariusAlchimavicius",
+  "author": "https://github.com/mariusalch",
   "icon": "icon.png",
+  "repository": "https://github.com/MariusAlch/vscode-json-to-ts",
   "engines": {
-    "vscode": "^1.38.0"
+    "vscode": "^1.74.0"
   },
+  "categories": [
+    "Other"
+  ],
   "keywords": [
     "types",
     "util",
     "typescript",
     "json"
   ],
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:jsonToTs.fromSelection",
-    "onCommand:jsonToTs.fromClipboard"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MariusAlch/vscode-json-to-ts.git"
-  },
-  "author": "https://github.com/mariusalch",
-  "main": "./out/index.js",
+  "activationEvents": [],
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "jsonToTs.fromSelection",
-        "title": "Selection",
-        "category": "Cat Coding"
+        "command": "jsonToTs.fromClipboard",
+        "title": "JSON to TS: Convert from clipboard"
       },
       {
-        "command": "jsonToTs.fromClipboard",
-        "title": "Do some refactoring",
-        "category": "Cat Coding"
+        "command": "jsonToTs.fromSelection",
+        "title": "JSON to TS: Convert from text selection"
       }
+      
     ],
     "keybindings": [
       {
@@ -54,21 +47,20 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "lint": "tslint -p ./",
-    "watch": "tsc -w -p ./"
-  },
-  "dependencies": {
-    "copy-paste": "^1.3.0",
-    "json-to-ts": "^1.7.0",
-    "universal-analytics": "^0.4.20",
-    "uuid-by-string": "^3.0.2"
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/copy-paste": "^1.1.30",
-    "@types/node": "^10.5.2",
-    "@types/universal-analytics": "0.3.27",
-    "@types/vscode": "^1.38.0",
-    "tslint": "^5.16.0",
-    "typescript": "^3.5.1"
+    "@types/node": "^18",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "json-to-ts": "^2.1.0"
   }
 }
+
+

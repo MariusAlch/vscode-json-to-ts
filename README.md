@@ -26,16 +26,6 @@
 - Optional types
 - Array types
 
-## Known Issues
-
-`Command failed: xclip -selection clipboard -o`
-
----
-
-Solution: `sudo apt-get install xclip`
-
-Happens when linux is missing clipboard packages
-
 ## Links
 
 - [Repo](https://github.com/MariusAlch/vscode-json-to-ts)
